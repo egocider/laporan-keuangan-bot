@@ -1,7 +1,7 @@
 //CONFIG
 var BOT_TOKEN = "6756757685:AAGoihXK3ElBO6-XbcjxlrwvlV8kB2myC9A"; //BOT TOKEN ANDA
 var SS_URL =
-  "https://docs.google.com/spreadsheets/d/1cj25tC-LtXYfNA19DHitYwz-b0DK5TV1QKpwXs4Flbc/edit#gid=0"; //URL SPREADSHEET
+  "https://docs.google.com/spreadsheets/d/1cj25tC-LtXYfNA19DHitYwz-b0DK5TV1QKpwXs4Flbc/"; //URL SPREADSHEET
 var SHEET_NAME = "Sheet1"; //NAMA SHEET
 var USERS = [1347888872]; //CHAT ID, bisa lebih dari 1
 
@@ -32,33 +32,27 @@ function commands(update) {
     if (text.startsWith("/start")) {
       sendMessage({
         chat_id: chatId,
-        text: "Mulai laporan dengan cara \n/new [harga] [#kategori] [item1, item2 dst]",
+        text: "Mulai laporan dengan cara \n/a [harga] [item1, item2 dst]",
       });
-    } else if (text.startsWith("/new")) {
+    } else if (text.startsWith("/a")) {
       let item,
         harga,
-        kategori,
         stext = text.split(" ");
 
       harga = eval(stext[1]);
-      kategori = stext[2].startsWith("#") ? stext[2].replace("#", "") : "";
-      stext.splice(0, 3);
       item = stext.join(" ");
 
-      if (harga && kategori && item) {
-        insert_value(
-          [tanggal, kategori, item, harga, chatId, first_name],
-          SHEET
-        );
+      if (harga && item) {
+        insert_value([tanggal, item, harga, chatId, first_name], SHEET);
 
         sendMessage({
           chat_id: chatId,
-          text: "Laporan sukses.",
+          text: "Laporan sukses ( ˘ ³˘)♥︎.",
         });
       } else {
         sendMessage({
           chat_id: chatId,
-          text: "Gagal. Pastikan sesuai format. \n/new [harga] [#kategori] [item1, item2 dst]",
+          text: "Gagal. Pastikan sesuai format. \n/a [harga]  [item1, item2 dst]",
         });
       }
     }
