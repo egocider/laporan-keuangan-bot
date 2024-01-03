@@ -1,5 +1,5 @@
 //CONFIG
-var BOT_TOKEN = "6756757685:AAGoihXK3ElBO6-XbcjxlrwvlV8kB2myC9A"; //BOT TOKEN ANDA
+var BOT_TOKEN = "123456789:JKIhihKHI!@#$ljLLJL"; //BOT TOKEN ANDA
 var SS_URL =
   "https://docs.google.com/spreadsheets/d/1cj25tC-LtXYfNA19DHitYwz-b0DK5TV1QKpwXs4Flbc/"; //URL SPREADSHEET
 var SHEET_NAME = "Sheet1"; //NAMA SHEET
