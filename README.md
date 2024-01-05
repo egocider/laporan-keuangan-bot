@@ -14,7 +14,6 @@ Laporan keuangan, pencatatan pengeluaran dengan Bot Telegram yang terintegrasi d
 ## Buat Spreadsheet dengan kolom:
 1. ID
 2. Tanggal
-3. Kategori
 4. Item
 5. Harga
 6. ID Pelapor
